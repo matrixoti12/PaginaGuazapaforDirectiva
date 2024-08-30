@@ -17,7 +17,7 @@
             font-family: 'Roboto', sans-serif;
             overflow-x: hidden;
             overflow-y: auto;
-            padding-bottom: 80px; /* Para asegurar que el botón de siguiente sea accesible */
+            padding-bottom: 80px;
         }
 
         .container {
@@ -122,9 +122,22 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
             margin-bottom: 10px;
-            cursor: default; /* Se desactiva la manipulación */
+            cursor: default;
             user-select: none;
             transition: background-color 0.2s ease;
+        }
+
+        /* Estilos para los estados de los partidos */
+        .match-item.jugado {
+            background-color: #154be2; /* Verde para jugado */
+        }
+
+        .match-item.pendiente {
+            background-color: #ff0707; /* Amarillo para pendiente */
+        }
+
+        .match-item.reprogramado {
+            background-color: #1ffdf6; /* Rojo para reprogramado */
         }
 
         .navigation {
@@ -156,274 +169,268 @@
     <div class="container">
         <h1>Calendario de Partidos</h1>
         <div class="card-container">
-            <div class="card active" data-team="Talleres">
-                <div class="team-name">Talleres</div>
+            <div class="card active" data-team="Newcastle">
+                <div class="team-name">Newcastle</div>
                 <ul class="match-list">
-                    <li class="match-item">Cruz Azul</li>
-                    <li class="match-item">Sevilla</li>
-                    <li class="match-item">Red Bull</li>
-                    <li class="match-item">Poco Loco</li>
-                    <li class="match-item">Real Madrid</li>
-                    <li class="match-item">RD1</li>
-                    <li class="match-item">Olympic</li>
-                    <li class="match-item">Atlético</li>
-                    <li class="match-item">Quesoneta</li>
-                    <li class="match-item">Borussia Dortmund</li>
-                    <li class="match-item">Galaxy</li>
-                    <li class="match-item">Roma</li>
-                    <li class="match-item">Juventus</li>
+                    <li class="match-item jugado">Arsenal</li>
+                    <li class="match-item jugado">Valencia</li>
+                    <li class="match-item jugado">Yogui</li>
+                    <li class="match-item jugado">Torrejas</li>
+                    <li class="match-item jugado">Lyon</li>
+                    <li class="match-item jugado">Clase A</li>
+                    <li class="match-item jugado">Champagne</li>
+                    <li class="match-item jugado">Rodeo 2</li>
+                    <li class="match-item pendiente">River</li>
+                    <li class="match-item pendiente">Baratillo</li>
+                    <li class="match-item pendiente">Halcones</li>
+                    <li class="match-item pendiente">Bayer Leverkusen</li>
+                    <li class="match-item jugado">Trópic</li>
                 </ul>
             </div>
-            <div class="card" data-team="Cruz Azul">
-                <div class="team-name">Cruz Azul</div>
+            <div class="card" data-team="Arsenal">
+                <div class="team-name">Arsenal</div>
                 <ul class="match-list">
-                    <li class="match-item">Talleres</li>
-                    <li class="match-item">Sevilla</li>
-                    <li class="match-item">Red Bull</li>
-                    <li class="match-item">Poco Loco</li>
-                    <li class="match-item">Real Madrid</li>
-                    <li class="match-item">RD1</li>
-                    <li class="match-item">Olympic</li>
-                    <li class="match-item">Atlético</li>
-                    <li class="match-item">Quesoneta</li>
-                    <li class="match-item">Borussia Dortmund</li>
-                    <li class="match-item">Galaxy</li>
-                    <li class="match-item">Roma</li>
-                    <li class="match-item">Juventus</li>
+                    <li class="match-item jugado">Newcastle</li>
+                    <li class="match-item jugado">Valencia</li>
+                    <li class="match-item jugado">Yogui.a</li>
+                    <li class="match-item jugado">Torrejas</li>
+                    <li class="match-item jugado">Lyon</li>
+                    <li class="match-item jugado">Clase A</li>
+                    <li class="match-item pendiente">Champagne</li>
+                    <li class="match-item reprogramado">Rodeo 2</li>
+                    <li class="match-item reprogramado">River</li>
+                    <li class="match-item reprogramado">Baratillo</li>
+                    <li class="match-item pendiente">Halcones</li>
+                    <li class="match-item jugado">Bayer Leverkusen</li>
+                    <li class="match-item jugado">Trópico</li>
                 </ul>
             </div>
-            <div class="card" data-team="Roma">
-                <div class="team-name">Roma</div>
+            <div class="card" data-team="Valencia">
+                <div class="team-name">Valencia</div>
                 <ul class="match-list">
-                    <li class="match-item">Juventus</li>
-                    <li class="match-item">Red Bull</li>
-                    <li class="match-item">Poco Loco</li>
-                    <li class="match-item">Real Madrid</li>
-                    <li class="match-item">RD1</li>
-                    <li class="match-item">Olympic</li>
-                    <li class="match-item">Atlético</li>
-                    <li class="match-item">Quesoneta</li>
-                    <li class="match-item">Borussia Dortmund</li>
-                    <li class="match-item">Galaxy</li>
-                    <li class="match-item">Sevilla</li>
-                    <li class="match-item">Talleres</li>
-                    <li class="match-item">Cruz Azul</li>
+                    <li class="match-item jugado">Newcastle</li>
+                    <li class="match-item jugado">Arsenal</li>
+                    <li class="match-item jugado">Yoggi</li>
+                    <li class="match-item jugado">Torrejas</li>
+                    <li class="match-item jugado">Lyon</li>
+                    <li class="match-item jugado">Clase A</li>
+                    <li class="match-item jugado">Champagne</li>
+                    <li class="match-item jugado">Rodeo 2</li>
+                    <li class="match-item pendiente">River</li>
+                    <li class="match-item pendiente">Baratillo</li>
+                    <li class="match-item pendiente">Halcones</li>
+                    <li class="match-item pendiente">Bayer Leverkusen</li>
+                    <li class="match-item jugado">Trópico</li>
                 </ul>
             </div>
-            <div class="card" data-team="Juventus">
-                <div class="team-name">Juventus</div>
+            <div class="card" data-team="Yoggi">
+                <div class="team-name">Yogui.A</div>
                 <ul class="match-list">
-                    <li class="match-item">Roma</li>
-                    <li class="match-item">Talleres</li>
-                    <li class="match-item">Red Bull</li>
-                    <li class="match-item">Poco Loco</li>
-                    <li class="match-item">Real Madrid</li>
-                    <li class="match-item">RD1</li>
-                    <li class="match-item">Olympic</li>
-                    <li class="match-item">Atlético</li>
-                    <li class="match-item">Quesoneta</li>
-                    <li class="match-item">Borussia Dortmund</li>
-                    <li class="match-item">Galaxy</li>
-                    <li class="match-item">Sevilla</li>
-                    <li class="match-item">Cruz Azul</li>
+                    <li class="match-item jugado">Newcastle</li>
+                    <li class="match-item jugado">Arsenal</li>
+                    <li class="match-item jugado">Valencia</li>
+                    <li class="match-item jugado">Torrejas</li>
+                    <li class="match-item jugado">Lyon</li>
+                    <li class="match-item jugado">Clase A</li>
+                    <li class="match-item jugado">Champagne</li>
+                    <li class="match-item jugado">Rodeo 2</li>
+                    <li class="match-item jugado">River</li>
+                    <li class="match-item jugado">Baratillo</li>
+                    <li class="match-item jugado">Halcones</li>
+                    <li class="match-item jugado">Bayer Leverkusen</li>
+                    <li class="match-item jugado">Trópico</li>
                 </ul>
             </div>
-            <div class="card" data-team="Red Bull">
-                <div class="team-name">Red Bull</div>
+            <div class="card" data-team="Torrejas">
+                <div class="team-name">Torrejas</div>
                 <ul class="match-list">
-                    <li class="match-item">Juventus</li>
-                    <li class="match-item">Poco Loco</li>
-                    <li class="match-item">Real Madrid</li>
-                    <li class="match-item">RD1</li>
-                    <li class="match-item">Olympic</li>
-                    <li class="match-item">Atlético</li>
-                    <li class="match-item">Quesoneta</li>
-                    <li class="match-item">Borussia Dortmund</li>
-                    <li class="match-item">Galaxy</li>
-                    <li class="match-item">Sevilla</li>
-                    <li class="match-item">Talleres</li>
-                    <li class="match-item">Cruz Azul</li>
-                    <li class="match-item">Roma</li>
+                    <li class="match-item jugado">Newcastle</li>
+                    <li class="match-item jugado">Arsenal</li>
+                    <li class="match-item jugado">Valencia</li>
+                    <li class="match-item jugado">Yoggi</li>
+                    <li class="match-item jugado">Lyon</li>
+                    <li class="match-item jugado">Clase A</li>
+                    <li class="match-item jugado">Champagne</li>
+                    <li class="match-item jugado">Rodeo 2</li>
+                    <li class="match-item jugado">River</li>
+                    <li class="match-item jugado">Baratillo</li>
+                    <li class="match-item jugado">Halcones</li>
+                    <li class="match-item jugado">Bayer Leverkusen</li>
+                    <li class="match-item jugado">Trópico</li>
                 </ul>
             </div>
-            <div class="card" data-team="Poco Loco">
-                <div class="team-name">Poco Loco</div>
+            <div class="card" data-team="Lyon">
+                <div class="team-name">Lyon</div>
                 <ul class="match-list">
-                    <li class="match-item">Red Bull</li>
-                    <li class="match-item">Real Madrid</li>
-                    <li class="match-item">RD1</li>
-                    <li class="match-item">Olympic</li>
-                    <li class="match-item">Atlético</li>
-                    <li class="match-item">Quesoneta</li>
-                    <li class="match-item">Borussia Dortmund</li>
-                    <li class="match-item">Galaxy</li>
-                    <li class="match-item">Sevilla</li>
-                    <li class="match-item">Talleres</li>
-                    <li class="match-item">Cruz Azul</li>
-                    <li class="match-item">Roma</li>
-                    <li class="match-item">Juventus</li>
+                    <li class="match-item jugado">Newcastle</li>
+                    <li class="match-item jugado">Arsenal</li>
+                    <li class="match-item jugado">Valencia</li>
+                    <li class="match-item jugado">Yoggi</li>
+                    <li class="match-item jugado">Torrejas</li>
+                    <li class="match-item jugado">Clase A</li>
+                    <li class="match-item jugado">Champagne</li>
+                    <li class="match-item jugado">Rodeo 2</li>
+                    <li class="match-item jugado">River</li>
+                    <li class="match-item jugado">Baratillo</li>
+                    <li class="match-item jugado">Halcones</li>
+                    <li class="match-item jugado">Bayer Leverkusen</li>
+                    <li class="match-item jugado">Trópico</li>
                 </ul>
             </div>
-            <div class="card" data-team="Real Madrid">
-                <div class="team-name">Real Madrid</div>
+            <div class="card" data-team="Clase A">
+                <div class="team-name">Clase A</div>
                 <ul class="match-list">
-                    <li class="match-item">Poco Loco</li>
-                    <li class="match-item">RD1</li>
-                    <li class="match-item">Olympic</li>
-                    <li class="match-item">Atlético</li>
-                    <li class="match-item">Quesoneta</li>
-                    <li class="match-item">Borussia Dortmund</li>
-                    <li class="match-item">Galaxy</li>
-                    <li class="match-item">Sevilla</li>
-                    <li class="match-item">Talleres</li>
-                    <li class="match-item">Cruz Azul</li>
-                    <li class="match-item">Roma</li>
-                    <li class="match-item">Juventus</li>
-                    <li class="match-item">Red Bull</li>
+                    <li class="match-item jugado">Newcastle</li>
+                    <li class="match-item jugado">Arsenal</li>
+                    <li class="match-item jugado">Valencia</li>
+                    <li class="match-item jugado">Yoggi</li>
+                    <li class="match-item jugado">Torrejas</li>
+                    <li class="match-item jugado">Lyon</li>
+                    <li class="match-item jugado">Champagne</li>
+                    <li class="match-item jugado">Rodeo 2</li>
+                    <li class="match-item jugado">River</li>
+                    <li class="match-item jugado">Baratillo</li>
+                    <li class="match-item jugado">Halcones</li>
+                    <li class="match-item jugado">Bayer Leverkusen</li>
+                    <li class="match-item jugado">Trópico</li>
                 </ul>
             </div>
-            <div class="card" data-team="RD1">
-                <div class="team-name">RD1</div>
+            <div class="card" data-team="Champagne">
+                <div class="team-name">Champagne</div>
                 <ul class="match-list">
-                    <li class="match-item">Real Madrid</li>
-                    <li class="match-item">Olympic</li>
-                    <li class="match-item">Atlético</li>
-                    <li class="match-item">Quesoneta</li>
-                    <li class="match-item">Borussia Dortmund</li>
-                    <li class="match-item">Galaxy</li>
-                    <li class="match-item">Sevilla</li>
-                    <li class="match-item">Talleres</li>
-                    <li class="match-item">Cruz Azul</li>
-                    <li class="match-item">Roma</li>
-                    <li class="match-item">Juventus</li>
-                    <li class="match-item">Red Bull</li>
-                    <li class="match-item">Poco Loco</li>
+                    <li class="match-item jugado">Newcastle</li>
+                    <li class="match-item jugado">Arsenal</li>
+                    <li class="match-item jugado">Valencia</li>
+                    <li class="match-item jugado">Yoggi</li>
+                    <li class="match-item jugado">Torrejas</li>
+                    <li class="match-item jugado">Lyon</li>
+                    <li class="match-item jugado">Clase A</li>
+                    <li class="match-item jugado">Rodeo 2</li>
+                    <li class="match-item jugado">River</li>
+                    <li class="match-item jugado">Baratillo</li>
+                    <li class="match-item jugado">Halcones</li>
+                    <li class="match-item jugado">Bayer Leverkusen</li>
+                    <li class="match-item jugado">Trópico</li>
                 </ul>
             </div>
-            <div class="card" data-team="Olympic">
-                <div class="team-name">Olympic</div>
+            <div class="card" data-team="Rodeo 2">
+                <div class="team-name">Rodeo 2</div>
                 <ul class="match-list">
-                    <li class="match-item">RD1</li>
-                    <li class="match-item">Atlético</li>
-                    <li class="match-item">Quesoneta</li>
-                    <li class="match-item">Borussia Dortmund</li>
-                    <li class="match-item">Galaxy</li>
-                    <li class="match-item">Sevilla</li>
-                    <li class="match-item">Talleres</li>
-                    <li class="match-item">Cruz Azul</li>
-                    <li class="match-item">Roma</li>
-                    <li class="match-item">Juventus</li>
-                    <li class="match-item">Red Bull</li>
-                    <li class="match-item">Poco Loco</li>
-                    <li class="match-item">Real Madrid</li>
+                    <li class="match-item jugado">Newcastle</li>
+                    <li class="match-item jugado">Arsenal</li>
+                    <li class="match-item jugado">Valencia</li>
+                    <li class="match-item jugado">Yoggi</li>
+                    <li class="match-item jugado">Torrejas</li>
+                    <li class="match-item jugado">Lyon</li>
+                    <li class="match-item jugado">Clase A</li>
+                    <li class="match-item jugado">Champagne</li>
+                    <li class="match-item jugado">River</li>
+                    <li class="match-item jugado">Baratillo</li>
+                    <li class="match-item jugado">Halcones</li>
+                    <li class="match-item jugado">Bayer Leverkusen</li>
+                    <li class="match-item jugado">Trópico</li>
                 </ul>
             </div>
-            <div class="card" data-team="Atlético">
-                <div class="team-name">Atlético</div>
+            <div class="card" data-team="River">
+                <div class="team-name">River</div>
                 <ul class="match-list">
-                    <li class="match-item">Olympic</li>
-                    <li class="match-item">Quesoneta</li>
-                    <li class="match-item">Borussia Dortmund</li>
-                    <li class="match-item">Galaxy</li>
-                    <li class="match-item">Sevilla</li>
-                    <li class="match-item">Talleres</li>
-                    <li class="match-item">Cruz Azul</li>
-                    <li class="match-item">Roma</li>
-                    <li class="match-item">Juventus</li>
-                    <li class="match-item">Red Bull</li>
-                    <li class="match-item">Poco Loco</li>
-                    <li class="match-item">Real Madrid</li>
-                    <li class="match-item">RD1</li>
-                </ul>
-            </div>  
-            <div class="card" data-team="Quesoneta">
-                <div class="team-name">Quesoneta</div>
-                <ul class="match-list">
-                    <li class="match-item">Talleres</li>
-                    <li class="match-item">Cruz Azul</li>
-                    <li class="match-item">Roma</li>
-                    <li class="match-item">Juventus</li>
-                    <li class="match-item">Red Bull</li>
-                    <li class="match-item">Poco Loco</li>
-                    <li class="match-item">Real Madrid</li>
-                    <li class="match-item">RD1</li>
-                    <li class="match-item">Olympic</li>
-                    <li class="match-item">Atlético</li>
-                    <li class="match-item">Borussia Dortmund</li>
-                    <li class="match-item">Galaxy</li>
-                    <li class="match-item">Sevilla</li>
+                    <li class="match-item jugado">Newcastle</li>
+                    <li class="match-item jugado">Arsenal</li>
+                    <li class="match-item jugado">Valencia</li>
+                    <li class="match-item jugado">Yoggi</li>
+                    <li class="match-item jugado">Torrejas</li>
+                    <li class="match-item jugado">Lyon</li>
+                    <li class="match-item jugado">Clase A</li>
+                    <li class="match-item jugado">Champagne</li>
+                    <li class="match-item jugado">Rodeo 2</li>
+                    <li class="match-item jugado">Baratillo</li>
+                    <li class="match-item jugado">Halcones</li>
+                    <li class="match-item jugado">Bayer Leverkusen</li>
+                    <li class="match-item jugado">Trópico</li>
                 </ul>
             </div>
-            
-            <div class="card" data-team="Borussia Dortmund">
-                <div class="team-name">Borussia Dortmund</div>
+            <div class="card" data-team="Baratillo">
+                <div class="team-name">Baratillo</div>
                 <ul class="match-list">
-                    <li class="match-item">Talleres</li>
-                    <li class="match-item">Cruz Azul</li>
-                    <li class="match-item">Roma</li>
-                    <li class="match-item">Juventus</li>
-                    <li class="match-item">Red Bull</li>
-                    <li class="match-item">Poco Loco</li>
-                    <li class="match-item">Real Madrid</li>
-                    <li class="match-item">RD1</li>
-                    <li class="match-item">Olympic</li>
-                    <li class="match-item">Atlético</li>
-                    <li class="match-item">Quesoneta</li>
-                    <li class="match-item">Galaxy</li>
-                    <li class="match-item">Sevilla</li>
+                    <li class="match-item jugado">Newcastle</li>
+                    <li class="match-item jugado">Arsenal</li>
+                    <li class="match-item jugado">Valencia</li>
+                    <li class="match-item jugado">Yoggi</li>
+                    <li class="match-item jugado">Torrejas</li>
+                    <li class="match-item jugado">Lyon</li>
+                    <li class="match-item jugado">Clase A</li>
+                    <li class="match-item jugado">Champagne</li>
+                    <li class="match-item jugado">Rodeo 2</li>
+                    <li class="match-item jugado">River</li>
+                    <li class="match-item jugado">Halcones</li>
+                    <li class="match-item jugado">Bayer Leverkusen</li>
+                    <li class="match-item jugado">Trópico</li>
                 </ul>
             </div>
-            
-            <div class="card" data-team="Galaxy">
-                <div class="team-name">Galaxy</div>
+            <div class="card" data-team="Halcones">
+                <div class="team-name">Halcones</div>
                 <ul class="match-list">
-                    <li class="match-item">Talleres</li>
-                    <li class="match-item">Cruz Azul</li>
-                    <li class="match-item">Roma</li>
-                    <li class="match-item">Juventus</li>
-                    <li class="match-item">Red Bull</li>
-                    <li class="match-item">Poco Loco</li>
-                    <li class="match-item">Real Madrid</li>
-                    <li class="match-item">RD1</li>
-                    <li class="match-item">Olympic</li>
-                    <li class="match-item">Atlético</li>
-                    <li class="match-item">Quesoneta</li>
-                    <li class="match-item">Borussia Dortmund</li>
-                    <li class="match-item">Sevilla</li>
+                    <li class="match-item jugado">Newcastle</li>
+                    <li class="match-item jugado">Arsenal</li>
+                    <li class="match-item jugado">Valencia</li>
+                    <li class="match-item jugado">Yoggi</li>
+                    <li class="match-item jugado">Torrejas</li>
+                    <li class="match-item jugado">Lyon</li>
+                    <li class="match-item jugado">Clase A</li>
+                    <li class="match-item jugado">Champagne</li>
+                    <li class="match-item jugado">Rodeo 2</li>
+                    <li class="match-item jugado">River</li>
+                    <li class="match-item jugado">Baratillo</li>
+                    <li class="match-item jugado">Bayer Leverkusen</li>
+                    <li class="match-item jugado">Trópico</li>
                 </ul>
             </div>
-            
-            <div class="card" data-team="Sevilla">
-                <div class="team-name">Sevilla</div>
+            <div class="card" data-team="Bayer Leverkusen">
+                <div class="team-name">Bayer Leverkusen</div>
                 <ul class="match-list">
-                    <li class="match-item">Talleres</li>
-                    <li class="match-item">Cruz Azul</li>
-                    <li class="match-item">Roma</li>
-                    <li class="match-item">Juventus</li>
-                    <li class="match-item">Red Bull</li>
-                    <li class="match-item">Poco Loco</li>
-                    <li class="match-item">Real Madrid</li>
-                    <li class="match-item">RD1</li>
-                    <li class="match-item">Olympic</li>
-                    <li class="match-item">Atlético</li>
-                    <li class="match-item">Quesoneta</li>
-                    <li class="match-item">Borussia Dortmund</li>
-                    <li class="match-item">Galaxy</li>
+                    <li class="match-item jugado">Newcastle</li>
+                    <li class="match-item jugado">Arsenal</li>
+                    <li class="match-item jugado">Valencia</li>
+                    <li class="match-item jugado">Yoggi</li>
+                    <li class="match-item jugado">Torrejas</li>
+                    <li class="match-item jugado">Lyon</li>
+                    <li class="match-item jugado">Clase A</li>
+                    <li class="match-item jugado">Champagne</li>
+                    <li class="match-item jugado">Rodeo 2</li>
+                    <li class="match-item jugado">River</li>
+                    <li class="match-item jugado">Baratillo</li>
+                    <li class="match-item jugado">Halcones</li>
+                    <li class="match-item jugado">Trópico</li>
                 </ul>
-            </div>            
+            </div>
+            <div class="card" data-team="Trópico">
+                <div class="team-name">Trópico</div>
+                <ul class="match-list">
+                    <li class="match-item jugado">Newcastle</li>
+                    <li class="match-item jugado">Arsenal</li>
+                    <li class="match-item jugado">Valencia</li>
+                    <li class="match-item jugado">Yoggi</li>
+                    <li class="match-item jugado">Torrejas</li>
+                    <li class="match-item jugado">Lyon</li>
+                    <li class="match-item jugado">Clase A</li>
+                    <li class="match-item jugado">Champagne</li>
+                    <li class="match-item jugado">Rodeo 2</li>
+                    <li class="match-item jugado">River</li>
+                    <li class="match-item jugado">Baratillo</li>
+                    <li class="match-item jugado">Halcones</li>
+                    <li class="match-item jugado">Bayer Leverkusen</li>
+                </ul>
+            </div>
         </div>
         <div class="navigation">
-            <button class="nav-button" id="prevBtn" disabled>Anterior</button>
-            <button class="nav-button" id="nextBtn">Siguiente</button>
-        </div>
-    </div>
-
+            <button class="nav-button" id="prevButton">Anterior</button>
+            <button class="nav-button" id="nextButton">Siguiente</button>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             let currentCardIndex = 0;
             const cards = document.querySelectorAll('.card');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevButton');
+            const nextBtn = document.getElementById('nextButton');
 
             function updateCardVisibility() {
                 cards.forEach((card, index) => {
@@ -447,6 +454,8 @@
                     updateCardVisibility();
                 }
             });
+
+            updateCardVisibility(); // Initialize button states
         });
     </script>
 </body>
